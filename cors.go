@@ -82,7 +82,7 @@ func (ch *cors) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 				return
 			}
 
-			allowedHeaders = append(allowedHeaders, canonicalHeader)
+			allowedHeaders = append(ch.allowedHeaders, canonicalHeader)
 		}
 
 		if len(allowedHeaders) > 0 {
